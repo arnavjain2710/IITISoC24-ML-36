@@ -31,9 +31,26 @@ YOLO v8 with pretrained weights was used to classify these images into 6 categor
 6) Using Meta's Llama-3-8B-Instruct as our LLM, we give in the initial prompt, and start a dictionary of messages, which dynamically appends the user prompt and bot's response to form a dictionary, which is feeded every time into the LLM, to remember the context of the conversation. <br />
 7) Using Coqui's tts_models/multilingual/multi-dataset/xtts_v2 we convert the bot's response to an audio and use the ipd.Audio library to play it, for the cloning we have two audios, one male and one female to select assitant's voice. <br />
 
-# Contents of the Git Repo
+# Contents of the Git Repo, documentation of efforts and experiments made so far
 1) The directory 'Lit_Review' consists of all the research papers, articles and online resources used. <br />
-2) The directory 'Run it on your own ' consists of all the necessary files needed to run it on your own system, the colab file should be run in colab environment, and the audio files and the pretrained modle weights 'best.pt' must be uploaded before <br />
+2) The directory 'Run it on your own ' consists of all the necessary files needed to run it on your own system, the colab file should be run in colab environment, and the audio files and the pretrained modle weights 'best.pt' must be uploaded before. This code runs on YOLO and is the best functional pipeline. <br />
 3) The file 'copy_of_iitisoc_dataloading' contains models built from scratch, includes dataloading, preprocessing, feature extraction codes and experimentation of various models to acheive audio emotion classfication. <br />
 4) file 'copy_of_no_fine_tuning' consists of sewing together different pretrained, and not fine tuned models to achieve the end goal. it uses speech brain's pretrained model for audio emotion classfication. <br />
 5) 'finetuning_wav2vec2_lg_xlsr' is an attempt to finetune the wav2vec2 model, but it was ram intensive and hence incomplete. <br />
+6) 'fintetune_classification_emo' we fine tune wav2vec2 on our own dataset for emotion classfication. <br />
+7) 'Gradio_model_deploy' is an attempt to deploy the fine tuned wav2vec2 on Gradio, but due to microphone access issues wasn't able to. <br />
+8) 'My own fine tuned model' is a functional pipeline that can be run, and runs on the fine tuned version of wav2vec2. <br />
+9) 'RAVDESS copy of dataloading' is an implementation of YOLO on a smaller subsection of the data, to monitor the performance. <br />
+10) 'modified feature definitions' was a trial of running the conventional ML models (CNN RNN LSTMS) on changed feature definitions. <br />
+11) 'pretrained_YOLO_ravdess_copy_of_IITISOC'  is an implementation of YOLO, but htis time using fixed weights, on a smaller subsection of the data, to monitor the performance. <br />
+12) 'generate corresponding video from audio' is a mix of various pretrained models, that can be joined with my model, to generate corresponding video from the audio generated. **This is something the PS didn't ask for, just an extra effort,** not integrated with the complete code yet. But all the inputs it needs are present as the outputs of Run it on your own/IITISOC Demo file. <br/>
+
+
+# How to run my file:
+1) Open the file  Run it on your own/IITISOC Demo in Google Colab, upload best.pt, mixofemotions.wav(for female voice output) or male_voice(for male voice output) in the /content directory. <br/>
+2) Install pip dependencies of first cell, restart the session. <br/>
+3) Run the function definitions. <br/>
+4) Install TTS, **DO NOT RESTART SESSSION AFTER THIS** <br/>
+5) Run the setup of TTS <br/>
+6) The cell marked 'this cell can be run again and again' has to be pressed each time you want to record an audio to continue the conversation. <br/>
+7) To clear context and start a fresh conversation, run the last cell. <br/>
