@@ -31,3 +31,9 @@ YOLO v8 with pretrained weights was used to classify these images into 6 categor
 6) Using Meta's Llama-3-8B-Instruct as our LLM, we give in the initial prompt, and start a dictionary of messages, which dynamically appends the user prompt and bot's response to form a dictionary, which is feeded every time into the LLM, to remember the context of the conversation. <br />
 7) Using Coqui's tts_models/multilingual/multi-dataset/xtts_v2 we convert the bot's response to an audio and use the ipd.Audio library to play it, for the cloning we have two audios, one male and one female to select assitant's voice. <br />
 
+# Contents of the Git Repo
+1) The directory 'Lit_Review' consists of all the research papers, articles and online resources used. <br />
+2) The directory 'Run it on your own ' consists of all the necessary files needed to run it on your own system, the colab file should be run in colab environment, and the audio files and the pretrained modle weights 'best.pt' must be uploaded before <br />
+3) The file 'copy_of_iitisoc_dataloading' contains models built from scratch, includes dataloading, preprocessing, feature extraction codes and experimentation of various models to acheive audio emotion classfication. <br />
+4) file 'copy_of_no_fine_tuning' consists of sewing together different pretrained, and not fine tuned models to achieve the end goal. it uses speech brain's pretrained model for audio emotion classfication. <br />
+5) 'finetuning_wav2vec2_lg_xlsr' is an attempt to finetune the wav2vec2 model, but it was ram intensive and hence incomplete. <br />
