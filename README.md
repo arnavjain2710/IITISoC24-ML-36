@@ -44,6 +44,11 @@ YOLO v8 with pretrained weights was used to classify these images into 6 categor
 10) 'modified feature definitions' was a trial of running the conventional ML models (CNN RNN LSTMS) on changed feature definitions. <br />
 11) 'pretrained_YOLO_ravdess_copy_of_IITISOC'  is an implementation of YOLO, but htis time using fixed weights, on a smaller subsection of the data, to monitor the performance. <br />
 12) 'IITISOC demo with video' is a mix of various pretrained models, that can be joined with my model, to generate corresponding video from the audio generated. **This is something the PS didn't ask for, just an extra effort,** It will generate **Batman** as your assistant replying in an appropriate tone, **not just in audio, but also video**. <br/>
+# Sample: 
+Input: "I have a lot of work today!" <br />
+Emotion in which I spoke: Sad <br />
+Output Video: <br />
+![Alt text](https://drive.google.com/file/d/1Ye8Y5NaTacy82kdk6jf_1vM8BZJQY7n7/view?usp=sharing)
 
 
 # How to run my file:
