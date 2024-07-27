@@ -47,8 +47,8 @@ YOLO v8 with pretrained weights was used to classify these images into 6 categor
 # Sample: 
 Input: "I have a lot of work today!" <br />
 Emotion in which I spoke: Sad <br />
-Output Video: <br />
-![Alt text](https://drive.google.com/file/d/1Ye8Y5NaTacy82kdk6jf_1vM8BZJQY7n7/view?usp=sharing)
+**Watch the Output Video here**: <br />
+https://drive.google.com/file/d/1Ye8Y5NaTacy82kdk6jf_1vM8BZJQY7n7/view?usp=sharing
 
 
 # How to run my file:
